@@ -810,6 +810,8 @@ li.project a:hover div.thumbnailContainer .thumbnailDescription{
 	-webkit-transition: .5s ease-in;
 }
 
+
+
 li.project a:hover img.imagefit{
 	opacity: 0.5;
 }
@@ -818,11 +820,46 @@ h3.underline{
 	text-decoration: underline;	
 }
 
-/* @group CONTACT PAGE */
+/* @group NEWS PAGE */
+
+li.nostyle a{
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	color: #9c9e9f;
+}
 
 
 
 /* @end */
+
+/* @group Project List Template */
+
+div.two-auto-col {
+	 -moz-column-count: 2;
+       -moz-column-gap: 8px;
+       -webkit-column-count: 2;
+       -webkit-column-gap: 8px;
+}
+
+li.projectlist{
+	list-style-type: none;
+}
+
+li.projectlist a{
+	color: #9c9e9f;
+	text-decoration: underline;
+}
+
+
+/* @end */
+
+
+
+
+
+
+
 
 
 

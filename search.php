@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="grid_16 mainView alpha">
+<div class="content borderTop_1">
 	<div id="content">
 	<?php if ( have_posts() ) : ?>
 	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'blankslate' ), '<span>' . get_search_query()  . '</span>' ); ?></h1>
@@ -19,6 +19,6 @@
 	<?php endif; ?>
 	</div>
 	
-</div><!-- .grid_17 -->
+</div><!-- .content -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

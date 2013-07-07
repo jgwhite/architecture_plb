@@ -6,7 +6,7 @@ Description: Outputs the project, uses Advanced Custom Fields to generate the co
 ?>
 
 <?php get_header(); ?>
-<div class="grid_16 mainView alpha">
+<div class="content borderTop_1">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php the_content(); ?>			
 
@@ -40,6 +40,6 @@ Description: Outputs the project, uses Advanced Custom Fields to generate the co
 <!--end advanced custom fields-->
 
 <?php endwhile; endif; ?>
-</div><!--grid_17-->
+</div><!--content-->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
