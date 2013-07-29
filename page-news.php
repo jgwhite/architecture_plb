@@ -7,9 +7,10 @@
 <?php get_header(); ?>
 <div class="content borderTop_1">
 	<?php $temp = $wp_query; $wp_query= null;
-	$wp_query = new WP_Query(); $wp_query->query('category_name=news&showposts=5' . '&paged='.$paged);
+	$wp_query = new WP_Query(); $wp_query->query('category_name=news&showposts=3' . '&paged='.$paged);
 	while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-	<div class="row">
+	
+	<div class="news_item">
 		<li class="nostyle"><a href="<?php the_permalink(); ?>" title="Read more">
 		<?php if( get_field( "introduction_text" ) ): ?>
 		<div class="grid_10">
@@ -24,20 +25,18 @@
 		</div><!-- .grid_12 -->
 		<?php endif; ?>
 		</a></li>
-	</div><!-- .row -->
+	</div><!-- .newsitem -->
+	
 	<?php endwhile; ?>
 	<?php if ($paged > 1) { ?>
 
-	<nav id="nav-posts">
+	<div class="navigtaion">
 		<div class="prev"><?php next_post_link('%link', 'Next post in category', TRUE); ?></div>	
 		<div class="next"><?php previous_post_link('%link', 'Previous post in category', TRUE); ?></div>
-	</nav>
+	</div>
 	
 	<?php } else { ?>
 
-	<nav id="nav-posts">
-		<div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
-	</nav>
 
 	<?php } ?>
 	<?php wp_reset_postdata(); ?>
