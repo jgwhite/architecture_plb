@@ -8,7 +8,7 @@ Description: Outputs the only 'posts' that have the parent category of 'news' - 
 <?php get_header(); ?>
 
 
-
+<div class="content borderTop_1">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php the_content(); ?>		
 	<?php if( get_field( "introduction_text" ) ): ?>
@@ -26,10 +26,10 @@ Description: Outputs the only 'posts' that have the parent category of 'news' - 
 	<?php endif; ?>	
 	<?php endwhile; endif; ?>
 <nav id="nav-posts">
-	<div class="prev"><?php next_post_link('%link', 'Next post in category', TRUE); ?></div>	
-	<div class="next"><?php previous_post_link('%link', 'Previous post in category', TRUE); ?></div>
+	<div class="prev"><?php next_post_link('%link', 'Next post', TRUE); ?></div>	
+	<div class="next"><?php previous_post_link('%link', 'Previous post', TRUE); ?></div>
 </nav>
-
+</div><!--content-->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 

@@ -26,7 +26,7 @@ window.PLB = {
   placeNewsItems: function() {
     console.log('Placing news items...');
     
-    var positions = [3, 6, 7, 24, 25, 26],
+    var positions = [1, 3, 4, 24, 25, 26],
         projects = $('.category-projects');
 
     $('.category-news').each(function(idx) {

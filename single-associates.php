@@ -1,6 +1,6 @@
 <?php
 /*
-Single Post Template: Directors
+Single Post Template: Associates
 Description: 
 */
 ?>

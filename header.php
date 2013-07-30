@@ -8,9 +8,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/jquery.cycle.all.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/jquery.ba-hashchange.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/site.js"></script>
-
 </head>
 <body <?php body_class(); ?>>
 	<div class="container">

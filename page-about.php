@@ -5,13 +5,13 @@
 */
 ?>
 <?php get_header(); ?>
-	<div class="content">
+	<div class="content borderTop_1">
 		<a id="directors">
-			<div class="team borderTop_1">
-				<div class="grid_3">
+			<div class="team" >
+				<div class="grid_4">
 					<h2>Directors</h2>
 				</div><!-- .grid_4 -->
-				<div class="grid_17">
+				<div class="grid_18 end">
 					<?php $temp = $wp_query; $wp_query= null;
 					$wp_query = new WP_Query(); $wp_query->query('category_name=directors');
 					while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
@@ -41,11 +41,11 @@
 		
 		
 		<a id="associates">
-			<div class="team borderTop_1">
-				<div class="grid_3">
+			<div class="team borderTop_1 paddingTop_07">
+				<div class="grid_4">
 					<h2>Associates</h2>
 					</div><!-- .grid_4 -->
-				<div class="grid_17">
+				<div class="grid_18 end">
 					<?php $temp = $wp_query; $wp_query= null;
 					$wp_query = new WP_Query(); $wp_query->query('category_name=associates');
 					while ($wp_query->have_posts()) : $wp_query->the_post(); ?>

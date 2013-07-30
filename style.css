@@ -6,6 +6,8 @@
 
 /* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
 
+/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
+
 /* @group RESET */
 
 /**
@@ -32,6 +34,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -69,7 +73,7 @@ div.container{
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 16px;
-	
+	position: relative;	
 }
 
 div.content {
@@ -85,6 +89,8 @@ div.sidebar{
 	width: 262px;
 	float: left;
 	margin-left: 38px;
+	position: absolute;
+	right: 0;
 }
 
 
@@ -350,36 +356,44 @@ div.homepage_post:nth-child(23n+4){
 	width: 172px;
 	float: left;
 	margin: 0 8px 70px 0;
+
 }
 
 div.homepage_post:nth-child(23n+5){
 	width:262px;
 	float: left;
 	margin: 0 8px 10px 120px;
+
 }
 
 div.homepage_post:nth-child(23n+6){
 	width:262px;
 	float: left;
 	margin: 0 0px 10px 0;
+	height: 188px;
 }
 
 div.homepage_post:nth-child(23n+7){
 	width: 172px;
 	float: left;
 	margin: 0 8px 70px 0;
+	
 }
 
 div.homepage_post:nth-child(23n+8){
 	width: 172px;
 	float: left;
 	margin: 0 8px 70px 210px;
+	height: 188px;
+
+	
 }
 
 div.homepage_post:nth-child(23n+9){
 	width:352px;
 	float: left;
 	margin: 0 8px 70px 0;
+	
 }
 
 div.homepage_post:nth-child(23n+10){
@@ -626,6 +640,17 @@ div.homepage_post:nth-child(46n+46){
 }
 
 
+
+.paddingTop_07{
+	padding-top: 7px;
+}
+
+.nopadding{
+	padding: 0!important;
+}
+
+
+
 /* Float clear */
 div.clear{
 	clear: both;
@@ -642,6 +667,10 @@ body{
 
 p{
 	margin-bottom: 1.5em;
+}
+
+p a{
+	color: #9c9e9f;
 }
 
 b, strong {
@@ -795,6 +824,44 @@ ul.project_filter li a:hover{
 }
 
 
+div.shareDownload {
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+	padding-top: 4px;	
+}
+
+div.shareDownload ul{
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.shareDownload ul li{
+	float: left;
+	display: inline;	
+	margin: 0;
+	padding: 0;
+	width: auto;
+
+}
+
+div.shareDownload ul li a{
+	color: #919192;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	margin-right: 25px;
+}
+
+div.shareDownload ul li a:hover{
+	color: #2d2d2d;
+}
+
+
 /* @end */
 
 
@@ -871,7 +938,44 @@ h3.underline{
 	text-decoration: underline;	
 }
 
+
+
+
+
+/* @group CONTACT PAGE */
+div.mapcontrols iframe {
+	display: none;
+}
+
+a.mapimage {
+	margin-bottom: 5px;
+	float: left;
+		transition: .3s ease-in;
+	-moz-transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+
+a.mapimage:hover{
+		opacity: 0.7;
+}
+
+/* @end */
+
+
+
 /* @group NEWS PAGE */
+
+li.nostyle{
+	list-style-type: none;
+	float: left;
+	width: 100%;
+}
+
+div.news_item{
+	float: left;
+	width: 100%;
+}
+
 
 li.nostyle a{
 	font-weight: normal;
@@ -880,17 +984,14 @@ li.nostyle a{
 	color: #9c9e9f;
 }
 
-li.nostyle{
-	list-style-type: none;
-}
-
-div.news_item {
-	width: 100%;
+#nav-posts {
 	float: left;
-	margin-bottom: 10px;
+	width: 100%;
 }
 
-
+#nav-posts a{
+	color: #929292;
+}
 
 /* @end */
 
@@ -920,11 +1021,53 @@ li.seniorteam {
 	width: 172px;
 	float: left;
 	list-style-type: none;
-	margin-right: 8px;
+	
 }
 
 li.nostyle img{
 	width: 100%;
+}
+
+li.seniorteam:nth-child(7n+1){
+	width: 172px;
+	float: left;
+	margin: 0 8px 10px 0;
+}
+
+li.seniorteam:nth-child(7n+2){
+	width: 172px;
+	float: left;
+	margin: 0 8px 10px 0;
+}
+
+li.seniorteam:nth-child(7n+3){
+	width: 172px;
+	float: left;
+	margin: 0 150px 10px 0;
+}
+
+li.seniorteam:nth-child(7n+4){
+	width: 172px;
+	float: left;
+	margin: 0 8px 10px 0;
+}
+
+li.seniorteam:nth-child(7n+5){
+	width: 172px;
+	float: left;
+	margin: 0 0px 10px 180px;
+}
+
+li.seniorteam:nth-child(7n+6){
+	width: 172px;
+	float: left;
+	margin: 0 8px 10px 180px;
+}
+
+li.seniorteam:nth-child(7n+7){
+	width: 172px;
+	float: left;
+	margin: 0 8px 10px 0;
 }
 
 
@@ -947,18 +1090,50 @@ li.nostyle img{
 
 li.team {
 	list-style-type: none;
-}
-
-
-
-
-
-div.team_post{
 	width: 172px;
 	float: left;
-	margin: 0 8px 10px 0;
+	margin-bottom: 10px;
+	margin-right: 8px;
 
 }
+
+li.team:nth-child(10n+1) {
+margin-right: 188px;
+}
+
+li.team:nth-child(10n+2) {
+margin-right: 0;
+}
+
+li.team:nth-child(10n+3) {
+margin-left: 180px;
+}
+
+li.team:nth-child(10n+4) {
+margin-right: 0;
+}
+
+li.team:nth-child(10n+5) {
+margin-left: 0;
+margin-right: 8px;
+}
+
+li.team:nth-child(10n+6) {
+margin-left: 0;
+margin-right: 180px;
+}
+
+li.team:nth-child(10n+7) {
+margin-left: 180px;
+margin-right: 0px;
+}
+
+li.team:nth-child(10n+8) {
+margin-left: 8px;
+margin-right: 0px;
+}
+
+
 
 
 li.team a,
