@@ -26,33 +26,21 @@
 			<p><?php the_field('sidebar_information', 11); ?></p>
 		<?php } ?>
 		
-		
-		
-		
 		<?php if (is_category()) {?>
 			<?php echo category_description(); ?>
 		<?php } ?>
-
 		
 		<?php if ( is_single() && in_category( 'projects')) { ?>
-			<div class="projectMeta">
-				<h3><b><?php the_field('project_name'); ?></b></h3>
-				<h3><b>Completion Date</b> <?php the_field('completion_date'); ?></h3>
-				<h3><b>Contract Value</b> <?php the_field('contract_value'); ?></h3>
-				<h3><b>Client</b> <?php the_field('client'); ?></h3>			
-			</div><!-- .projectMeta -->
-			<p><?php the_field('project_description'); ?></p>
+			<?php echo category_description(); ?>
 		<?php } ?>
-		
-		
-		
-	</div><!-- .sidebar_copy_area -->
+ 	</div><!-- .sidebar_copy_area -->
 	
 	
 	<?php if (is_single() && in_category( 'projects')) { ?>
 		<div class="shareDownload borderTop_1">
 			<ul>
-				<li><a href="#">Share</a></li>
+				<li><a href="https://twitter.com/share" class="" data-lang="en">Share</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
 				<li><a href="<?php the_field('pdf_download'); ?>">Download PDF</a></li>
 			</ul>
 		</div><!-- .shareDownload -->

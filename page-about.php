@@ -73,6 +73,7 @@
 			</div><!-- .team -->
 		</a>
 		
+		<a id="team">
 		<div class="team borderTop_1 paddingTop_07">
 			<div class="grid_4">
 				<h2>Team</h2>
@@ -96,6 +97,7 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 	</div><!--grid-->	
+</a>
 		
 	</div><!-- .content -->
 <?php get_sidebar(); ?>

@@ -27,6 +27,15 @@ Description: Outputs the project, uses Advanced Custom Fields to generate the co
 	</div>
 </div><!-- .slideshowholder -->
 
+<div class="projectMeta">
+	<h3><b><?php the_field('project_name'); ?></b></h3>
+	<h3><b>Completion Date</b> <?php the_field('completion_date'); ?></h3>
+	<h3><b>Contract Value</b> <?php the_field('contract_value'); ?></h3>
+	<h3><b>Client</b> <?php the_field('client'); ?></h3>			
+</div><!-- .projectMeta -->
+<p><?php the_field('project_description'); ?></p>
+
+
 <!--end advanced custom fields-->
 
 <?php endwhile; endif; ?>
