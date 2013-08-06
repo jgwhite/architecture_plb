@@ -5,10 +5,7 @@
 <title><?php bloginfo('name'); ?> <?php wp_title("",true); ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 <?php wp_head(); ?>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/jquery.cycle.all.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/site.js"></script>
+
 <script type="text/javascript">
     jQuery(document).ready(function($){
         // Get current url

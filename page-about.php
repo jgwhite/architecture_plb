@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 	<div class="content borderTop_1">
-		<a id="directors">
+		<a name="directors">
 			<div class="team" >
 				<div class="grid_4">
 					<h2>Directors</h2>
@@ -40,7 +40,7 @@
 		
 		
 		
-		<a id="associates">
+		<a name="associates">
 			<div class="team borderTop_1 paddingTop_07">
 				<div class="grid_4">
 					<h2>Associates</h2>
@@ -73,12 +73,12 @@
 			</div><!-- .team -->
 		</a>
 		
-		<a id="team">
+		<a name="team">
 		<div class="team borderTop_1 paddingTop_07">
 			<div class="grid_4">
 				<h2>Team</h2>
 			</div><!-- .grid_4 -->
-			<div class="grid_18 end">
+			<div id="team" class="grid_18 end">
 				<?php if(get_field('team')): ?>
 					<?php while(has_sub_field('team')): ?>
 
@@ -98,7 +98,6 @@
 			<?php endif; ?>
 	</div><!--grid-->	
 </a>
-		
 	</div><!-- .content -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

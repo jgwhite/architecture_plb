@@ -1018,6 +1018,9 @@ li.projectlist a{
 	text-decoration: underline;
 }
 
+iframe{
+	display: none;
+}
 
 /* @end */
 
