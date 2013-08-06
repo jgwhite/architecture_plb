@@ -8,6 +8,8 @@
 
 /* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
 
+/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
+
 /* @group RESET */
 
 /**
@@ -792,10 +794,13 @@ ul.main_nav li a:hover{
 }
 
 ul.main_nav li.current_page_item a,
+li.current-menu-item a,
 ul#menu-about-us.menu li.current_page_item a,
 ul.project_filter li.current-post-parent a{
-	color: #171717;
+	color: #171717!important;
 }
+
+
 
 
 ul.main_nav li.current-page-ancestor a{

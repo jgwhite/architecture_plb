@@ -37,4 +37,17 @@ add_action('admin_menu', 'associates_menu');
 function associates_menu() {
 add_submenu_page('edit.php', 'Associates', 'Associates', 'manage_options', 'edit.php?category_name=associates' ); }
 
+
+function myTemplateSelect() {
+    if (is_category() && !is_feed()) {
+        if (is_category(get_cat_id('news')) || cat_is_ancestor_of(get_cat_id('news'), get_query_var('cat'))) {
+            load_template(TEMPLATEPATH . '/category-news.php');
+            exit;
+        }
+    }
+}
+
+add_action('template_redirect', 'myTemplateSelect');
+
+
 ?>

@@ -9,11 +9,22 @@
 						    <h3><?php the_field('project_name'); ?></h3>
 						<?php endif;?>
 						
-					
+						<?php if( get_field( "client" ) ): ?>
+						    <h3><?php the_field('client'); ?></h3>
+						<?php endif;?>
+						
+						<?php if( get_field( "homepage_intro" ) ): ?>
+								<h2>News</h2>
+						    <h3><?php the_field('homepage_intro'); ?></h3>
+						<?php endif;?>
+												
+						<h3 class="underline">Read More</h3>
+					</div><!-- .thumbnailDescription -->
+				<img class="imagefit" src="<?php the_field('thumbnail_image'); ?>">
 			</div><!--thumbnailContainer-->
 		</a>
 	</li><!--li.project-->
-<p><?php the_title(); ?></p> 
+
 
 <?php
 if(is_archive() || is_search()){
@@ -23,6 +34,5 @@ get_template_part('entry','content');
 }
 ?>
 </div> 
-
 
 

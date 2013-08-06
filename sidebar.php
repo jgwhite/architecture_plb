@@ -30,7 +30,7 @@
 		
 		
 		<?php if (is_category()) {?>
-			<p><?php echo category_description(); ?></p>
+			<?php echo category_description(); ?>
 		<?php } ?>
 
 		
@@ -138,6 +138,13 @@
 		<?php } ?>
 		
 		<?php if (is_single() && in_category( 'news')) { ?>
+			<ul class="project_filter isPageNews">
+				<span class="lightgrey">Filter by</span>
+			<?php wp_nav_menu( array( 'theme_location' => 'news-menu' ) ); ?>
+			</ul>
+		<?php } ?>
+		
+		<?php if (in_category( 'news')) { ?>
 			<ul class="project_filter isPageNews">
 				<span class="lightgrey">Filter by</span>
 			<?php wp_nav_menu( array( 'theme_location' => 'news-menu' ) ); ?>
