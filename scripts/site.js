@@ -40,21 +40,6 @@ window.PLB = {
 }
 
 /* Set team in random order on about page */
-var orig = $("#team").children();
-reorder();
-function reorder() {
-    var grp = $("#team").children();
-    var cnt = grp.length;
-    var temp, x;
-    for (var i = 0; i < cnt; i++) {
-        temp = grp[i];
-        x = Math.floor(Math.random() * cnt);
-        grp[i] = grp[x];
-        grp[x] = temp;
-    }
-    $(grp).remove();
-    $("#team").append($(grp));
-}
 
 
 /**

@@ -78,6 +78,7 @@
 			<div class="grid_4">
 				<h2>Team</h2>
 			</div><!-- .grid_4 -->
+			
 			<div id="team" class="grid_18 end">
 				<?php if(get_field('team')): ?>
 					<?php while(has_sub_field('team')): ?>
@@ -96,8 +97,27 @@
 			
 				<?php endwhile; ?>
 			<?php endif; ?>
+		</div>
 	</div><!--grid-->	
 </a>
-	</div><!-- .content -->
+
+	<script type="text/javascript" charset="utf-8">
+		var orig = $("#team").children();
+		reorder();
+		function reorder() {
+		    var grp = $("#team").children();
+		    var cnt = grp.length;
+		    var temp, x;
+		    for (var i = 0; i < cnt; i++) {
+		        temp = grp[i];
+		        x = Math.floor(Math.random() * cnt);
+		        grp[i] = grp[x];
+		        grp[x] = temp;
+		    }
+		    $(grp).remove();
+		    $("#team").append($(grp));
+		}	
+	</script>
+		</div><!-- .content -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

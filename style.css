@@ -1,15 +1,5 @@
 /* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
 
-/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
-
-/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
-
-/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
-
-/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
-
-/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
-
 /* @group RESET */
 
 /**
@@ -476,154 +466,11 @@ div.homepage_post:nth-child(23n+22){
 	float: left;
 }
 
-
-
 div.homepage_post:nth-child(23n+23){
 	width:262px;
 	float: left;
 	margin: 0 0px 70px 210px;
 }
-
-/*loop restarts
-div.homepage_post:nth-child(24n+24){
-	width: 172px;
-	float: left;
-	margin: 0 8px 10px 0;
-}
-
-div.homepage_post:nth-child(25n+25){
-	width:352px;
-	float: left;
-	margin: 0 0px 10px 120px;
-}
-
-div.homepage_post:nth-child(26n+26){
-	width: 172px;
-	float: left;
-	margin: 0 8px 70px 0;
-}
-
-div.homepage_post:nth-child(27n+27){
-	width: 172px;
-	float: left;
-	margin: 0 8px 70px 0;
-}
-
-div.homepage_post:nth-child(28n+28){
-	width:262px;
-	float: left;
-	margin: 0 8px 10px 120px;
-}
-
-div.homepage_post:nth-child(29n+29){
-	width:262px;
-	float: left;
-	margin: 0 0px 10px 0;
-}
-
-div.homepage_post:nth-child(30n+30){
-	width: 172px;
-	float: left;
-	margin: 0 8px 70px 0;
-}
-
-div.homepage_post:nth-child(31n+31){
-	width: 172px;
-	float: left;
-	margin: 0 8px 70px 210px;
-}
-
-div.homepage_post:nth-child(32n+32){
-	width:352px;
-	float: left;
-	margin: 0 8px 70px 0;
-}
-
-div.homepage_post:nth-child(33n+33){
-	width: 172px;
-	float: left;
-	margin: 0 0px 10px 120px;
-}
-
-div.homepage_post:nth-child(34n+34){
-	width: 172px;
-	float: left;
-	margin: 0 0px 70px 120px;
-}
-
-div.homepage_post:nth-child(35n+35){
-	width: 172px;
-	float: left;
-	margin: 0 8px 10px 0;
-}
-
-div.homepage_post:nth-child(36n+36){
-	width:262px;
-	float: left;
-	margin: 0 0px 10px 210px;
-}
-
-div.homepage_post:nth-child(37n+37){
-	width:352px;
-	float: left;
-	margin: 0 8px 70px 0;
-}
-
-div.homepage_post:nth-child(38n+38){
-	width: 172px;
-	float: left;
-	margin: 0 0px 192px 120px;
-}
-
-div.homepage_post:nth-child(39n+39){
-	width:262px;
-	float: left;
-	margin: 0 8px 10px 120px;
-}
-
-div.homepage_post:nth-child(40n+40){
-	width:262px;
-	float: left;
-	margin: 0 0px 10px 0;
-}
-
-div.homepage_post:nth-child(41n+41){
-	width: 172px;
-	float: left;
-	margin: 0 8px 70px 0;
-}
-
-div.homepage_post:nth-child(42n+42){
-	width: 172px;
-	float: left;
-	margin: 0 0px 70px 300px;
-}
-
-div.homepage_post:nth-child(43n+43){
-	width:352px;
-	float: left;
-	margin: 0 8px 10px 0;
-}
-
-div.homepage_post:nth-child(44n+44){
-	width: 172px;
-	float: left;
-	margin: 0 0px 140px 120px;
-}
-
-div.homepage_post:nth-child(45n+45){
-	width: 172px;
-	margin-right: 8px;
-	float: left;
-}
-
-div.homepage_post:nth-child(46n+46){
-	width:262px;
-	float: left;
-	margin: 0 0px 70px 210px;
-}
-
-/*loop restarts*/
 
 
 
@@ -789,7 +636,8 @@ ul.main_nav li a{
 	font-weight: 200;
 }
 
-ul.main_nav li a:hover{
+ul.main_nav li a:hover,
+#nav-posts a:hover{
 	color: #292929;
 }
 
@@ -873,7 +721,7 @@ div.shareDownload ul li a:hover{
 
 
 
-/* @group Colours and Borders */
+/* @group COLOURS AND BORDERS */
 .borderTop_1{
 	border-top: 1px solid #CACBCB;
 }
@@ -996,17 +844,31 @@ li.nostyle a{
 
 #nav-posts a{
 	color: #929292;
+	text-decoration: none;
+}
+
+div.next,
+div.prev {
+	width: 50%;
+	float: left;
+	
+}
+
+div.next {
+	text-align: right!important;
 }
 
 /* @end */
 
-/* @group Project List Template */
+
+/* @group PROJECT LIST TEMPLATE */
+/*Sets columns up in modern browsers*/
 
 div.two-auto-col {
-	 -moz-column-count: 2;
-       -moz-column-gap: 8px;
-       -webkit-column-count: 2;
-       -webkit-column-gap: 8px;
+	-moz-column-count: 2;
+   	-moz-column-gap: 8px;
+   	-webkit-column-count: 2;
+   	-webkit-column-gap: 8px;
 }
 
 li.projectlist{
@@ -1017,19 +879,16 @@ li.projectlist a{
 	color: #9c9e9f;
 	text-decoration: underline;
 }
-
-iframe{
-	display: none;
-}
-
 /* @end */
 
+
 /* @group DIRECTORS & ASSOCIATES */
+/* Sets all the positioning for the Directors & Associates*/
+
 li.seniorteam {
 	width: 172px;
 	float: left;
-	list-style-type: none;
-	
+	list-style-type: none;	
 }
 
 li.nostyle img{
@@ -1079,16 +938,44 @@ li.seniorteam:nth-child(7n+7){
 }
 
 
+/*Creates the postioning on the staff menus on single associates/directors */
+div.staffvisualmenu {
+	float: left;
+	margin-top: 10px;
+}
+
+div.staffvisualmenu li.seniorteam{
+	width: 112px;
+}
+
+div.staffvisualmenu li.seniorteam:nth-child(1){
+	margin-left: 120px;
+	margin-right: 120px;
+	float: left;
+}
+
+div.staffvisualmenu li.seniorteam:nth-child(2){
+	margin-left: 0px;
+	margin-right: 0px;
+	float: left;
+}
+
+div.staffvisualmenu li.seniorteam:nth-child(3){
+	margin-left: 128px;
+	float: left;
+	margin-right: 0;
+}
+
+div.staffvisualmenu li.seniorteam:nth-child(4){
+	margin-left: 120px;
+	float: left;
+	margin-right: 0;
+}
+
 /* @end */
 
 
-
-
-
-
-
-
-/* @group TEAM PAGE */
+/* @group TEAM SECTION */
 
 .team{
 	float: left;
@@ -1106,43 +993,40 @@ li.team {
 }
 
 li.team:nth-child(10n+1) {
-margin-right: 188px;
+	margin-right: 188px;
 }
 
 li.team:nth-child(10n+2) {
-margin-right: 0;
+	margin-right: 0;
 }
 
 li.team:nth-child(10n+3) {
-margin-left: 180px;
+	margin-left: 180px;
 }
 
 li.team:nth-child(10n+4) {
-margin-right: 0;
+	margin-right: 0;
 }
 
 li.team:nth-child(10n+5) {
-margin-left: 0;
-margin-right: 8px;
+	margin-left: 0;
+	margin-right: 8px;
 }
 
 li.team:nth-child(10n+6) {
-margin-left: 0;
-margin-right: 180px;
+	margin-left: 0;
+	margin-right: 180px;
 }
 
 li.team:nth-child(10n+7) {
-margin-left: 180px;
-margin-right: 0px;
+	margin-left: 180px;
+	margin-right: 0px;
 }
 
 li.team:nth-child(10n+8) {
-margin-left: 8px;
-margin-right: 0px;
+	margin-left: 8px;
+	margin-right: 0px;
 }
-
-
-
 
 li.team a,
 li.seniorteam a{
@@ -1164,8 +1048,6 @@ div.thumbnailContainer img{
 	-webkit-transition: .3s ease-in;
 }
 
-
-
 div.thumbnailContainer .thumbnailDescription{
 	display: none;
 	position: absolute;
@@ -1177,7 +1059,6 @@ div.thumbnailContainer .thumbnailDescription{
 	-webkit-transition: .5s ease-in;
 }
 
-
 li.team:hover div.thumbnailContainer .thumbnailDescription,
 li.seniorteam:hover div.thumbnailContainer .thumbnailDescription{
 	display: block;
@@ -1186,8 +1067,6 @@ li.seniorteam:hover div.thumbnailContainer .thumbnailDescription{
 	-moz-transition: .5s ease-in;
 	-webkit-transition: .5s ease-in;
 }
-
-
 
 li.team:hover img.imagefit,
 li.seniorteam:hover img.imagefit{
@@ -1234,28 +1113,24 @@ div.navigation{
 
 
 
-/* @group Slideshows */
+/* @group SLIDESHOWS */
 
+/*Quick demo of Jcycle shows */
 div.slideshowholder{
 	float: left;
 	position: relative;
-
 }
 
-
-
-
 .projectSlideshow{
-	height: 500px;
+	height: 460px;
 	width: 650px;
+	margin-bottom: 10px;
 
 }
 
 .projectSlideshow img{
 	width: 650px;
 }
-
-
 
 div.nav {
 	position: absolute;
@@ -1265,9 +1140,7 @@ div.nav {
 	width: 100%;
 	height: 30px;
 	background-color: rgba(255,255,255,0.79);
-
 }
-
 
 .leftarrow {
 	position: absolute;
@@ -1282,11 +1155,3 @@ div.nav {
 }
 
 /* @end*/
-
-
-
-
-
-
-
-

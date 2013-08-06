@@ -31,7 +31,7 @@
 		<?php } ?>
 		
 		<?php if ( is_single() && in_category( 'projects')) { ?>
-			<?php echo category_description(); ?>
+			<p><?php the_field('sidebar_cat_description'); ?>
 		<?php } ?>
  	</div><!-- .sidebar_copy_area -->
 	
@@ -39,8 +39,8 @@
 	<?php if (is_single() && in_category( 'projects')) { ?>
 		<div class="shareDownload borderTop_1">
 			<ul>
-				<li><a href="https://twitter.com/share" class="" data-lang="en">Share</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+				<li><a href="https://twitter.com/share" class="" data-lang="en">Share</a></li>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				<li><a href="<?php the_field('pdf_download'); ?>">Download PDF</a></li>
 			</ul>
 		</div><!-- .shareDownload -->
@@ -48,17 +48,16 @@
 
 	<div class="related borderTop_1">
 		<p>You may also like</p>
-		<?php $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3, 'post__not_in' => array($post->ID) ) );
-		if( $related ) foreach( $related as $post ) {
-		setup_postdata($post); ?>
-		
+		<?php $posts = get_field('related_projects');
+			if( $posts ): ?>
+			<?php foreach( $posts as $post): ?>
+			<?php setup_postdata($post); ?>
 			<li><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
 				<img class="imagefit" src="<?php the_field('thumbnail_image'); ?>"></a>
-		  </li>
-		
-		<?php }
-		
-		wp_reset_postdata(); ?>
+			</li>
+			<?php endforeach; ?>
+			<?php wp_reset_postdata(); ?>
+		<?php endif; ?>
 	</div><!-- .related -->
 	<?php } ?>
 
@@ -70,8 +69,7 @@
 	
 	
 	
-	<div class="sidebar_menu_area borderTop_1">
-		
+	<div class="sidebar_menu_area borderTop_1">		
 		<ul class="main_nav">
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		</ul>
@@ -124,13 +122,7 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'news-menu' ) ); ?>
 			</ul>
 		<?php } ?>
-		
-		<?php if (is_single() && in_category( 'news')) { ?>
-			<ul class="project_filter isPageNews">
-				<span class="lightgrey">Filter by</span>
-			<?php wp_nav_menu( array( 'theme_location' => 'news-menu' ) ); ?>
-			</ul>
-		<?php } ?>
+
 		
 		<?php if (in_category( 'news')) { ?>
 			<ul class="project_filter isPageNews">
@@ -144,7 +136,7 @@
 	
 	
 	<div class="search_box borderTop_1">
-		<?php get_search_form( $echo ); ?>
+		<?php get_search_form(); ?>
 	</div><!-- .search_box -->
 	
 	<div class="legal_info">
