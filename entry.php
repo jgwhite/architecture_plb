@@ -25,6 +25,8 @@
 		</a>
 	</li><!--li.project-->
 
+	<div class="viewer"></div>
+
 
 <?php
 if(is_archive() || is_search()){
