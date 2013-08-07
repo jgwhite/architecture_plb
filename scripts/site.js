@@ -92,7 +92,7 @@ APLB.projectFunction = function() {
       $.post(State.url, function(data) {
         $('.viewer').show();
         $('.project').animate({width : '100%'}, 100);
-        $('.viewer').load(State.url + ' .content', function(){
+        $('.viewer').load(State.url + ' .single-content', function(){
           $('.projectSlideshow').cycle({
             fx: 'scrollHorz',
             easeIn: 'swing',
