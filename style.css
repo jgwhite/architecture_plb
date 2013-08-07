@@ -806,6 +806,12 @@ li.project a{
 	line-height: 15px;
 }
 
+.viewer {
+	background: blue;
+	width: 500px;
+	height: 500px;
+}
+
 div.thumbnailContainer {
 	width: 100%;
 	position: relative;

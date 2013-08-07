@@ -72,3 +72,56 @@ a=b.extend({},c.defaults,a);return a.lazy?this.bind(a.event,function(d){var c=b(
 
 // Initialize all .smoothScroll links
 jQuery(function($){ $.localScroll({filter:'.smoothScroll'}); });
+
+
+
+/* Click project function */
+var APLB = {};
+
+APLB.projectFunction = function() {
+
+  elementClicked = $('.project a');
+
+  if ( window.history && history.pushState ) {
+
+    var   History = window.History,
+    State = History.getState();
+
+    function load_ajax_data() {
+      State = History.getState(); 
+      $.post(State.url, function(data) {
+        elementClicked.after('<div class="viewer"></div>');
+        $('.viewer').load(State.url + ' .content', function(){
+          $('html, body').animate({
+            scrollTop: $(this, elementClicked).offset().top
+          }, 500);
+        });
+        return false;
+      });
+    }
+
+    // Click for post
+    elementClicked.on('click', function(e) {
+      var path = $(this).attr('href');
+      var title = $(this).attr('title');
+      History.pushState('ajax',title,path);
+      return false;
+    });
+
+    if ($('body').hasClass('home')) {
+      History.Adapter.bind(window,'statechange',function() {
+        load_ajax_data();
+      });
+    } else {
+      History.Adapter.bind(window,'popstate',function() {
+        load_ajax_data();
+      });
+    }
+
+  }
+
+}
+
+$(function(){
+  APLB.projectFunction();
+});
