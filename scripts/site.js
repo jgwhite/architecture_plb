@@ -90,12 +90,11 @@ APLB.projectFunction = function() {
     function load_ajax_data() {
       State = History.getState(); 
       $.post(State.url, function(data) {
-        elementClicked.after('<div class="viewer"></div>');
-        $('.viewer').load(State.url + ' .content', function(){
+        $('.viewer').load(State.url + ' .content');
           // $('html, body').animate({
           //   scrollTop: $(elementClicked).offset().top
           // }, 500);
-        });
+        // });
         return false;
       });
     }

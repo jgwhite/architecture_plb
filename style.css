@@ -807,6 +807,9 @@ li.project a{
 }
 
 .viewer {
+	position: absolute;
+	top: 0;
+	left: 0;
 	background: blue;
 	width: 500px;
 	height: 500px;
