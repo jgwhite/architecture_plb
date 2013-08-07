@@ -39,9 +39,6 @@ window.PLB = {
   }
 }
 
-/* Set team in random order on about page */
-
-
 /**
  * SmoothScroll
  * This helper script created by DWUser.com.  Copyright 2012 DWUser.com.  

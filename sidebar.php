@@ -39,9 +39,9 @@
 	<?php if (is_single() && in_category( 'projects')) { ?>
 		<div class="shareDownload borderTop_1">
 			<ul>
-				<li><a href="https://twitter.com/share" class="" data-lang="en">Share</a></li>
+				<li class="twitter"><a href="https://twitter.com/share" data-lang="en">Share</a></li>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				<li><a href="<?php the_field('pdf_download'); ?>">Download PDF</a></li>
+				<li class="pdf"><a href="<?php the_field('pdf_download'); ?>">Download PDF</a></li>
 			</ul>
 		</div><!-- .shareDownload -->
 
