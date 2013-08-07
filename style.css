@@ -811,8 +811,9 @@ li.project a{
 	top: 0;
 	left: 0;
 	background: blue;
-	width: 500px;
-	height: 500px;
+	width: 100%;
+	height: auto;
+	overflow: auto;
 }
 .home .viewer {
 	display: none;
