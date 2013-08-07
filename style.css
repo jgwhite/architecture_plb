@@ -810,10 +810,9 @@ li.project a{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: blue;
-	width: 100%;
+	border: 1px solid #ccc;
+	width: 652px;
 	height: auto;
-	overflow: auto;
 }
 .home .viewer {
 	display: none;

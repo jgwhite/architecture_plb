@@ -122,11 +122,7 @@ APLB.projectFunction = function() {
       History.Adapter.bind(window,'statechange',function() {
         load_ajax_data();
       });
-    } else {
-      History.Adapter.bind(window,'popstate',function() {
-        load_ajax_data();
-      });
-    }
+    } else {}
 
   }
 
