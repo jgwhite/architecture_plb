@@ -92,9 +92,9 @@ APLB.projectFunction = function() {
       $.post(State.url, function(data) {
         elementClicked.after('<div class="viewer"></div>');
         $('.viewer').load(State.url + ' .content', function(){
-          $('html, body').animate({
-            scrollTop: $(this, elementClicked).offset().top
-          }, 500);
+          // $('html, body').animate({
+          //   scrollTop: $(elementClicked).offset().top
+          // }, 500);
         });
         return false;
       });
