@@ -814,6 +814,9 @@ li.project a{
 	width: 500px;
 	height: 500px;
 }
+.home .viewer {
+	display: none;
+}
 
 div.thumbnailContainer {
 	width: 100%;

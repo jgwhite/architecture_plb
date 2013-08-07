@@ -90,7 +90,18 @@ APLB.projectFunction = function() {
     function load_ajax_data() {
       State = History.getState(); 
       $.post(State.url, function(data) {
-        $('.viewer').load(State.url + ' .content');
+        $('.viewer').show();
+        $('.project').animate({width : '100%'}, 100);
+        $('.viewer').load(State.url + ' .content', function(){
+          $('.projectSlideshow').cycle({
+            fx: 'scrollHorz',
+            easeIn: 'swing',
+            timeout: 0, 
+            next:   '#next2', 
+            prev:   '#prev2'
+          });
+        });
+
           // $('html, body').animate({
           //   scrollTop: $(elementClicked).offset().top
           // }, 500);
