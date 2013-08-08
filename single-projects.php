@@ -60,8 +60,11 @@ Description: Outputs the project, uses Advanced Custom Fields to generate the co
 	This is now going to loop through 
 	the same loop as on the homepage
 	-->
+<div class="content borderTop_1">
 	<div class="gridset">
-	<?php query_posts(array('category_name' => 'projects', 'posts_per_page' => 20, 'paged' => $paged)) ?>
+
+			
+		<?php query_posts(array('category_name' => 'projects', 'posts_per_page' => 20, 'paged' => $paged)) ?>
 		<?php while ( have_posts() ) : the_post() ?>
 			<?php get_template_part( 'entry' ); ?>
 		<?php endwhile; ?>
@@ -72,6 +75,10 @@ Description: Outputs the project, uses Advanced Custom Fields to generate the co
 		<?php endwhile; ?>
 		<script> PLB.placeNewsItems() </script>
 	</div><!--gridset-->
+
+		<?php wp_reset_query(); ?>
+			<div class="navigation"><?php posts_nav_link(); ?></div>
+</div><!-- .content -->
 
 
 <div class="related">
