@@ -115,10 +115,7 @@ APLB.projectFunction = function() {
       var title = $(this).attr('title');
       var That = $(this);
       That.parents('div:eq(0)')
-        .css({ 
-          // position: 'absolute',
-          margin: '0'
-        })
+        .css({ margin: '0' })
         .animate({width:'652px'}, 500);
       $(this, '.project a').after('<div class="viewer"></div>');
       History.pushState('ajax',title,path);

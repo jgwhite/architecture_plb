@@ -814,9 +814,7 @@ li.project a{
 	background: #ccc;
 }
 .viewer .single-content {
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: static;
 	z-index: 101;
 }
 .home .viewer {
