@@ -807,12 +807,17 @@ li.project a{
 }
 
 .viewer {
+	position: relative;
+	width: 652px;
+	height: 500px;
+	z-index: 100;
+	background: #ccc;
+}
+.viewer .single-content {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border: 1px solid #ccc;
-	width: 652px;
-	height: auto;
+	z-index: 101;
 }
 .home .viewer {
 	display: none;

@@ -91,7 +91,6 @@ APLB.projectFunction = function() {
       State = History.getState(); 
       $.post(State.url, function(data) {
         $('.viewer').show();
-        $('.project').animate({width : '100%'}, 100);
         $('.viewer').load(State.url + ' .single-content', function(){
           $('.projectSlideshow').cycle({
             fx: 'scrollHorz',
@@ -114,6 +113,8 @@ APLB.projectFunction = function() {
     elementClicked.on('click', function(e) {
       var path = $(this).attr('href');
       var title = $(this).attr('title');
+      $(this, '.post').animate({width:'100px'}, 500);
+      $(this, '.project a').after('<div class="viewer"></div>');
       History.pushState('ajax',title,path);
       return false;
     });
