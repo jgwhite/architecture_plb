@@ -113,7 +113,13 @@ APLB.projectFunction = function() {
     elementClicked.on('click', function(e) {
       var path = $(this).attr('href');
       var title = $(this).attr('title');
-      $(this, '.post').animate({width:'100px'}, 500);
+      var That = $(this);
+      That.parents('div:eq(0)')
+        .css({ 
+          // position: 'absolute',
+          margin: '0'
+        })
+        .animate({width:'652px'}, 500);
       $(this, '.project a').after('<div class="viewer"></div>');
       History.pushState('ajax',title,path);
       return false;
