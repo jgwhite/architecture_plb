@@ -78,7 +78,7 @@ Description: Outputs the project, uses Advanced Custom Fields to generate the co
 
 		<?php wp_reset_query(); ?>
 			<div class="navigation"><?php posts_nav_link(); ?></div>
-	</div><!-- .content -->
+</div><!-- .content -->
 
 
 <div class="related">

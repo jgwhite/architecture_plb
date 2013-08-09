@@ -806,7 +806,7 @@ li.project a{
 	line-height: 15px;
 }
 
-.viewer {
+/*.viewer {
 	position: relative;
 	width: 652px;
 	height: 1000px;
@@ -819,7 +819,7 @@ li.project a{
 }
 .home .viewer {
 	display: none;
-}
+}*/
 
 div.thumbnailContainer {
 	width: 100%;

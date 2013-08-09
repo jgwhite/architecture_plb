@@ -80,7 +80,7 @@ var APLB = {};
 
 APLB.projectFunction = function() {
 
-  elementClicked = $('.project a');
+  elementClicked = $('.category-projects .project a');
 
   if ( window.history && history.pushState ) {
 
@@ -115,9 +115,9 @@ APLB.projectFunction = function() {
       var title = $(this).attr('title');
       var That = $(this);
       That.parents('div:eq(0)')
-        .css({ margin: '0' })
+        .css({ margin: '0', height: 'auto' })
         .animate({width:'652px'}, 500);
-      $(this, '.project a').after('<div class="viewer"></div>');
+      $(this, '.category-projects .project a').after('<div class="viewer"></div>');
       History.pushState('ajax',title,path);
       return false;
     });
