@@ -88,18 +88,16 @@ APLB.projectFunction = function() {
     State = History.getState();
 
     function load_ajax_data() {
-      State = History.getState(); 
+    State = History.getState(); 
       $.post(State.url, function(data) {
         $('.viewer').load(State.url + ' .single-content', function(){
-          $('.projectSlideshow').cycle({
-            fx: 'scrollHorz',
-            easeIn: 'swing',
-            timeout: 0, 
-            next:   '#next2', 
-            prev:   '#prev2'
-          }, function (){
-            $('.viewer').slideDown(function(){
-              $(this).fadeIn();
+          $('.viewer').slideDown('normal', function() {
+            $('.projectSlideshow').cycle({
+              fx: 'scrollHorz',
+              easeIn: 'swing',
+              timeout: 0, 
+              next:   '#next2', 
+              prev:   '#prev2'
             });
           });
         });
@@ -117,8 +115,6 @@ APLB.projectFunction = function() {
         var title = That.attr('title');
         var imgWidth = $('.imagefit').width();
         var imgContainer = $('.thumbnailContainer');
-
-        console.log(imgWidth);
 
         // Find clicked thumb width and apply it to container
         That.find(imgContainer).css({
