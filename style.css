@@ -806,20 +806,19 @@ li.project a{
 	line-height: 15px;
 }
 
-/*.viewer {
+.viewer {
 	position: relative;
 	width: 652px;
-	height: 1000px;
 	z-index: 100;
-	background: #ccc;
 }
 .viewer .single-content {
 	position: static;
 	z-index: 101;
+	margin: 0;
 }
 .home .viewer {
 	display: none;
-}*/
+}
 
 div.thumbnailContainer {
 	width: 100%;

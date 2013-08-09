@@ -100,33 +100,61 @@ APLB.projectFunction = function() {
             prev:   '#prev2'
           });
         });
-
-          // $('html, body').animate({
-          //   scrollTop: $(elementClicked).offset().top
-          // }, 500);
-        // });
-        return false;
       });
     }
 
     // Click for post
-    elementClicked.on('click', function(e) {
-      var path = $(this).attr('href');
-      var title = $(this).attr('title');
-      var That = $(this);
-      That.parents('div:eq(0)')
-        .css({ margin: '0', height: 'auto' })
-        .animate({width:'652px'}, 500);
-      $(this, '.category-projects .project a').after('<div class="viewer"></div>');
-      History.pushState('ajax',title,path);
-      return false;
-    });
+    elementClicked.each(function(index){
+    
+      $(this).on('click', function(e) {
 
-    if ($('body').hasClass('home')) {
-      History.Adapter.bind(window,'statechange',function() {
-        load_ajax_data();
+        // Set Variables
+        var That = $(this);
+        var path = That.attr('href');
+        var title = That.attr('title');
+        var imgWidth = $('.imagefit').width();
+        var imgContainer = $('.thumbnailContainer');
+
+        console.log(imgWidth);
+
+        // Find clicked thumb width and apply it to container
+        That.find(imgContainer).css({
+          minWidth : imgWidth
+        });
+
+          // Then fade out that thumb
+          $(That).fadeOut(function (){
+
+            // Go up dom to find parent div and make width 100%
+            That.parents('div:eq(0)')
+              .css({ margin: '0', height: 'auto' })
+              .animate({width:'652px'}, 500);
+          });
+
+        // Append viewer after project user has clicked on
+        $(this, '.category-projects .project a').after('<div class="viewer"></div>');
+
+        // History ting
+        History.pushState('ajax',title,path);
+
+        // Scroll to new viewer
+        $('html, body').animate({
+          scrollTop: $(That, '.viewer').offset().top
+        }, 500);
+
+        // Stop window navigating as it would normally when you click a link
+        return false;
+
       });
-    } else {}
+
+      // If on homepage, load_ajax_data as statechange
+      if ($('body').hasClass('home')) {
+        History.Adapter.bind(window,'statechange',function() {
+          load_ajax_data();
+        });
+      } else {}
+
+    });
 
   }
 
