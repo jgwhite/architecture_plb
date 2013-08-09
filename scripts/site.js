@@ -84,14 +84,21 @@ APLB.projectFunction = function() {
 
   if ( window.history && history.pushState ) {
 
-    var   History = window.History,
-    State = History.getState();
-
+    var viewer = $('<div class="viewer" />');
+    $(this, '.category-projects .project a').after(viewer);
+ 
+    // History ting
+    History.pushState({ viewer: viewer }, title, path);
+ 
+    // var History = window.History
+ 
+    // Load ajax data
     function load_ajax_data() {
-    State = History.getState(); 
-      $.post(State.url, function(data) {
-        $('.viewer').load(State.url + ' .single-content', function(){
-          $('.viewer').slideDown('normal', function() {
+    var state = History.getState();
+    var viewer = state.data.viewer;
+    $.post(state.url, function(data) {
+      viewer.load(State.url + ' .single-content', function(){
+          viewer.slideDown('normal', function() {
             $('.projectSlideshow').cycle({
               fx: 'scrollHorz',
               easeIn: 'swing',
