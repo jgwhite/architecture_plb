@@ -86,15 +86,13 @@ APLB.projectFunction = function() {
 
     var viewer = $('<div class="viewer" />');
     $(this, '.category-projects .project a').after(viewer);
- 
-    History.pushState({ viewer: viewer }, title, path);
- 
+  
     function load_ajax_data() {
     var state = History.getState();
     var viewer = state.data.viewer;
     $.post(state.url, function(data) {
       viewer.load(state.url + ' .single-content', function(){
-          $(this).slideDown('normal', function() {
+          $('.viewer').slideDown('normal', function() {
             $('.projectSlideshow').cycle({
               fx: 'scrollHorz',
               easeIn: 'swing',
@@ -139,10 +137,10 @@ APLB.projectFunction = function() {
           });
 
         // Append viewer after project user has clicked on
-        $(this, '.category-projects .project a').after('<div class="viewer"></div>');
+        // $(this, '.category-projects .project a').after('<div class="viewer"></div>');
 
         // History ting
-        History.pushState('ajax',title,path);
+        History.pushState({ viewer: viewer }, title, path);
 
         // Scroll to new viewer
         $('html, body').animate({
