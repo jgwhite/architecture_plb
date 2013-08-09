@@ -90,7 +90,6 @@ APLB.projectFunction = function() {
     function load_ajax_data() {
       State = History.getState(); 
       $.post(State.url, function(data) {
-        $('.viewer').show();
         $('.viewer').load(State.url + ' .single-content', function(){
           $('.projectSlideshow').cycle({
             fx: 'scrollHorz',
@@ -98,6 +97,10 @@ APLB.projectFunction = function() {
             timeout: 0, 
             next:   '#next2', 
             prev:   '#prev2'
+          }, function (){
+            $('.viewer').slideDown(function(){
+              $(this).fadeIn();
+            });
           });
         });
       });
@@ -123,7 +126,12 @@ APLB.projectFunction = function() {
         });
 
           // Then fade out that thumb
-          $(That).fadeOut(function (){
+          That.fadeOut(function (){
+
+            $(this).css({
+              display: 'block',
+              visibility: 'hidden'
+            });
 
             // Go up dom to find parent div and make width 100%
             That.parents('div:eq(0)')

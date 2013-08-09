@@ -812,13 +812,14 @@ li.project a{
 	z-index: 100;
 }
 .viewer .single-content {
-	position: static;
 	z-index: 101;
 	margin: 0;
 }
 .home .viewer {
 	display: none;
 }
+
+
 
 div.thumbnailContainer {
 	width: 100%;
