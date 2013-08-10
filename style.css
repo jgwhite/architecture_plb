@@ -846,7 +846,6 @@ li.project a{
 .viewer {
 	position: relative;
 	width: 652px;
-	margin-top: -450px;
 	z-index: 100;
 }
 .viewer .single-content {
