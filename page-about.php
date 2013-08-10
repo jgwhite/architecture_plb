@@ -101,6 +101,7 @@
 	</div><!--grid-->	
 </a>
 
+
 	<script type="text/javascript" charset="utf-8">
 		var orig = $("#team").children();
 		reorder();
@@ -118,6 +119,8 @@
 		    $("#team").append($(grp));
 		}	
 	</script>
+	
+
 		</div><!-- .content -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

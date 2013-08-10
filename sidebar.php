@@ -6,7 +6,10 @@
 		<?php } ?>
 		
 		<?php if (is_search()) { ?>
-			<h2><?php printf( __( 'Search Results for: %s', 'blankslate' ), '<span>' . get_search_query()  . '</span>' ); ?></h2>
+			<p><?php the_field('company_introduction', 'option'); ?></p>
+		<?php } ?>
+		
+		<?php if (is_404()) { ?>
 			<p><?php the_field('company_introduction', 'option'); ?></p>
 		<?php } ?>
 
@@ -98,6 +101,14 @@
 				</ul>
 		<?php } ?>
 		
+		<?php if (is_archive() && in_category( 'projects')) { ?>
+				<ul class="project_filter isProjectList">
+				<?php wp_nav_menu( array( 'theme_location' => 'projects-menu' ) ); ?>
+				</ul>
+		<?php } ?>
+		
+		
+		
 		<?php if (is_page(array('team','about','recruitment'))) { ?>
 			<ul class="project_filter isPageTeamAboutRecruitment">
 			<?php wp_nav_menu( array( 'theme_location' => 'about-menu' ) ); ?>
@@ -124,8 +135,8 @@
 		<?php } ?>
 
 		
-		<?php if (in_category( 'news')) { ?>
-			<ul class="project_filter isPageNews">
+		<?php if (is_archive() && in_category( 'news')) { ?>
+			<ul class="project_filter inCategoryNews">
 				<span class="lightgrey">Filter by</span>
 			<?php wp_nav_menu( array( 'theme_location' => 'news-menu' ) ); ?>
 			</ul>

@@ -2,6 +2,8 @@
 
 /* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
 
+/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
+
 /* @group RESET */
 
 /**
@@ -553,9 +555,34 @@ div.clear{
 
 
 /* @group TYPOGRAPHY */
+
+@import url("http://fast.fonts.net/lt/1.css?apiType=css&c=b51d296d-3c10-49b5-a992-8fbc5fc94182&fontids=726277,726294");
+
+@font-face{
+font-family:"Univers LT W02 45 Light";
+src:url("fonts/34ecd7fc-f469-4e0c-980b-6d7fcec493da.eot?#iefix");
+src:url("fonts/34ecd7fc-f469-4e0c-980b-6d7fcec493da.eot?#iefix") 
+format("eot"),url("fonts/47a5b741-405e-4d03-ba4a-e50cc7716ddf.woff") 
+format("woff"),url("fonts/6ef60ba5-712c-4ea5-9e57-0242591afed0.ttf") 
+format("truetype"),url("fonts/ae2bbb03-6095-4a28-a333-555527bde8f6.svg#ae2bbb03-6095-4a28-a333-555527bde8f6") format("svg");
+}
+
+@font-face{
+font-family:"Univers LT W02 55 Roman";
+src:url("fonts/f1999e78-ab0c-4adc-a7dc-51e567e6cf5e.eot?#iefix");
+src:url("fonts/f1999e78-ab0c-4adc-a7dc-51e567e6cf5e.eot?#iefix") 
+format("eot"),url("fonts/4d1e8df3-6c45-428d-a522-84c8a6a4e533.woff") 
+format("woff"),url("fonts/3c9abc50-742c-46dd-8af4-c50866112be0.ttf") 
+format("truetype"),url("fonts/c6310aa0-a8a1-4afc-a747-091de3970894.svg#c6310aa0-a8a1-4afc-a747-091de3970894") format("svg");
+}
+
+
+
 body{
-	font: 12px/13px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 12px/14px "Univers LT W02 55 Roman", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #9c9e9f;
+	webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 p{
@@ -650,7 +677,7 @@ div.search_box {
 	color: #959595;
 	margin: 0;
 	width: 160px;
-	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 12px "Univers LT W02 55 Roman", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	margin-right: 6px;
 }
 
@@ -676,7 +703,7 @@ ul.main_nav li{
 ul.main_nav li a{
 	color: #9c9e9f;
 	text-decoration: none;
-	font: 18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 18px "Univers LT W02 45 Light", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	font-weight: 200;
 }
 
@@ -788,6 +815,10 @@ li.pdf a{
 /* @group COLOURS AND BORDERS */
 .borderTop_1{
 	border-top: 1px solid #CACBCB;
+}
+
+.borderBtm_1{
+	border-bottom: 1px solid #CACBCB;
 }
 
 
@@ -1065,6 +1096,7 @@ div.staffvisualmenu li.seniorteam:nth-child(4){
 }
 
 
+
 li.team {
 	list-style-type: none;
 	width: 172px;
@@ -1233,23 +1265,132 @@ div.nav {
 
 /* @group SEARCH RESULTS */
 div.searchContainer {
-width: 200px;
+	width: 200px;
+	float: left;
+	height: 133px;
+	margin-bottom: 8px;
+	
+}
+
+div.searchContainer img{
+	display: none;
 }
 
 div.search_item {
 	float: left;
-width: 100%;
+	width: 100%;
 }
 
 li.search {
 	float: left;
 	list-style-type: none;
-width: 100%;
-display: block;
+	width: 100%;
+	display: block;
+}
+
+li.search a{
+	color: #5c5c5c;
+	list-style-type: none;
+}
+
+div.searchDescription{
+	float: left;
+	margin-left: 8px;
+}
+
+li.search:nth-child(1) div.search_item{
+	padding-top: 0;
+	border: none;
+}
+
+li.search:nth-child(22n+1) div.searchContainer{ 
+	background: url(images/swatches/aplb-swatch-1.png) no-repeat;
+}
+
+li.search:nth-child(22n+2) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-2.png) no-repeat; 
 }
 
 
+li.search:nth-child(22n+3) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-3.png) no-repeat; 
+}
 
+li.search:nth-child(22n+4) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-4.png) no-repeat; 
+}
+
+li.search:nth-child(22n+5) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-5.png) no-repeat; 
+}
+
+li.search:nth-child(22n+6) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-6.png) no-repeat; 
+}
+
+li.search:nth-child(22n+7) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-7.png) no-repeat; 
+}
+
+li.search:nth-child(22n+8) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-8.png) no-repeat; 
+}
+
+li.search:nth-child(22n+9) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-9.png) no-repeat; 
+}
+
+li.search:nth-child(22n+10) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-10.png) no-repeat; 
+}
+
+li.search:nth-child(22n+11) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-11.png) no-repeat; 
+}
+
+li.search:nth-child(22n+12) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-12.png) no-repeat; 
+}
+
+li.search:nth-child(22n+13) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-13.png) no-repeat; 
+}
+
+li.search:nth-child(22n+14) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-14.png) no-repeat; 
+}
+
+li.search:nth-child(22n+15) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-15.png) no-repeat; 
+}
+
+li.search:nth-child(22n+16) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-16.png) no-repeat; 
+}
+
+li.search:nth-child(22n+17) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-17.png) no-repeat; 
+}
+
+li.search:nth-child(22n+18) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-18.png) no-repeat; 
+}
+
+li.search:nth-child(22n+19) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-19.png) no-repeat; 
+}
+
+li.search:nth-child(22n+20) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-20.png) no-repeat; 
+}
+
+li.search:nth-child(22n+21) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-21.png) no-repeat; 
+}
+
+li.search:nth-child(22n+22) div.searchContainer{
+	background: url(images/swatches/aplb-swatch-22.png) no-repeat; 
+}
 /* @end */
 
 
