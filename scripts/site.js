@@ -83,32 +83,31 @@ APLB.projectFunction = function() {
   elementClicked = $('.category-projects .project a');
 
   if ( window.history && history.pushState ) {
-
-    var viewer = $('<div class="viewer" />');
-    $(this, '.category-projects .project a').after(viewer);
   
     function load_ajax_data() {
-    var state = History.getState();
-    var viewer = state.data.viewer;
-    $.post(state.url, function(data) {
-      viewer.load(state.url + ' .single-content', function(){
-          $('.viewer').slideDown('normal', function() {
-            $('.projectSlideshow').cycle({
-              fx: 'scrollHorz',
-              easeIn: 'swing',
-              timeout: 0, 
-              next:   '#next2', 
-              prev:   '#prev2'
+      var state = History.getState();
+      var viewer = $(state.data.postID + ' .viewer');
+      $.post(state.url, function(data) {
+        viewer.load(state.url + ' .single-content', function(){
+            $(this).slideDown('normal', function() {
+              $('.projectSlideshow').cycle({
+                fx: 'scrollHorz',
+                easeIn: 'swing',
+                timeout: 0, 
+                next:   '#next2', 
+                prev:   '#prev2'
+              });
             });
           });
         });
-      });
-    }
+      }
 
     // Click for post
     elementClicked.each(function(index){
     
       $(this).on('click', function(e) {
+
+        e.preventDefault();
 
         // Set Variables
         var That = $(this);
@@ -137,18 +136,17 @@ APLB.projectFunction = function() {
           });
 
         // Append viewer after project user has clicked on
-        // $(this, '.category-projects .project a').after('<div class="viewer"></div>');
+        var viewer = $('<div class="viewer" />');
+        $(this, '.category-projects .project a').after(viewer);
 
         // History ting
-        History.pushState({ viewer: viewer }, title, path);
+        var postID = That.closest('.post').attr('id');
+        History.pushState({ postID: postID }, title, path);
 
         // Scroll to new viewer
         $('html, body').animate({
           scrollTop: $(That, '.viewer').offset().top
         }, 500);
-
-        // Stop window navigating as it would normally when you click a link
-        return false;
 
       });
 
