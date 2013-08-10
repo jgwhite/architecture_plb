@@ -844,14 +844,9 @@ li.project a{
 }
 
 .viewer {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: blue;
-	width: 500px;
-	height: 500px;
 	position: relative;
 	width: 652px;
+	margin-top: -450px;
 	z-index: 100;
 }
 .viewer .single-content {
