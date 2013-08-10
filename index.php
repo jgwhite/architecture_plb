@@ -2,7 +2,7 @@
 <div class="content borderTop_1">
 <div class="gridset">
 
-  <?php query_posts(array( //Query to find 20 Projects posts
+  <?php query_posts(array(
 		'category_name' => 'projects', 
 		'posts_per_page' => 20, 
 		'paged' => $paged)) ?>
@@ -12,7 +12,7 @@
   <?php endwhile; ?>
 
 	
- <?php query_posts(array( //Query set to find News posts, only 3 posts and 'yes' to 'featured on homepage'
+ <?php query_posts(array( 
 		'category_name' => 'news', 
 		'posts_per_page' => 3, 
 		'meta_query' => array(
@@ -54,4 +54,17 @@
     <div class="navigation"><?php posts_nav_link(); ?></div>
 </div><!-- .content -->
 <?php get_sidebar(); ?>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/jquery.infinitescroll.min.js"></script>
+<script type="text/javascript">
+  $('div.content').infinitescroll({
+		loading:{
+			finishedMsg: "<em>Finished</em>",
+				msgText: "<em>Loading...</em>",
+				img: "http://architectureplb.com/development/wp-content/themes/theme-plb/images/ajax-loader.gif"
+		},
+    navSelector  : "div.navigation",            
+    nextSelector : "div.navigation a:first",                  
+    itemSelector : "div.content .homepage_post"
+  });
+</script>
 <?php get_footer(); ?>
