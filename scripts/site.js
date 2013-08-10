@@ -20,7 +20,6 @@ $(function() {
   
 });
 
-
 /*Method for adding current class to News / Projects archive pages - don't judge me*/
 $(function() {
   var loc = window.location.href; // returns the full URL
@@ -31,7 +30,6 @@ $(function() {
 	    $('#menu-item-244').addClass('current_page_item');
 	  }
 });
-
 
 
 /*Positioning index elements*/

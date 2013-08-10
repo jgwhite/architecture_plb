@@ -1,5 +1,4 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class('homepage_post'); ?>>
-	
 	<li class="project">
 			<a href="<?php the_permalink(); ?>" title="<?php printf( __('Read %s', 'blankslate'), the_title_attribute('echo=0') ); ?>" rel="bookmark">
 				<div class="thumbnailContainer">
@@ -24,8 +23,6 @@
 			</div><!--thumbnailContainer-->
 		</a>
 	</li><!--li.project-->
-
-
 <?php
 if(is_archive() || is_search()){
 get_template_part('entry','summary');
@@ -33,4 +30,4 @@ get_template_part('entry','summary');
 get_template_part('entry','content');
 }
 ?>
-</div> 
+</div> <!--post-->

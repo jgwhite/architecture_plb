@@ -127,6 +127,12 @@
 			</ul>
 		<?php } ?>
 		
+		<?php if (is_single() && in_category( 'news')) { ?>
+			<ul class="project_filter isSingleNews">
+			<?php wp_nav_menu( array( 'theme_location' => 'news-menu' ) ); ?>
+			</ul>
+		<?php } ?>
+		
 		<?php if (is_page( 'news' )) { ?>
 			<ul class="project_filter isPageNews">
 				<span class="lightgrey">Filter by</span>
