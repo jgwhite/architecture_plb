@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <div class="content borderTop_1">
 <div class="gridset">
 <?php the_post(); ?>
