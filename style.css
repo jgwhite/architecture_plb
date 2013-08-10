@@ -813,14 +813,12 @@ li.project a{
 }
 
 .viewer {
-<<<<<<< HEAD
 	position: absolute;
 	top: 0;
 	left: 0;
 	background: blue;
 	width: 500px;
 	height: 500px;
-=======
 	position: relative;
 	width: 652px;
 	z-index: 100;
@@ -828,16 +826,11 @@ li.project a{
 .viewer .single-content {
 	z-index: 101;
 	margin: 0;
->>>>>>> 5597dcadabb19eb144dce62f5332eb666eb32a8c
+
 }
 .home .viewer {
 	display: none;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 5597dcadabb19eb144dce62f5332eb666eb32a8c
 
 div.thumbnailContainer {
 	width: 100%;
