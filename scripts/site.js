@@ -80,43 +80,84 @@ var APLB = {};
 
 APLB.projectFunction = function() {
 
-  elementClicked = $('.project a');
+  elementClicked = $('.category-projects .project a');
 
   if ( window.history && history.pushState ) {
-
-    var   History = window.History,
-    State = History.getState();
-
+  
     function load_ajax_data() {
-      State = History.getState(); 
-      $.post(State.url, function(data) {
-        elementClicked.after('<div class="viewer"></div>');
-        $('.viewer').load(State.url + ' .content', function(){
-          // $('html, body').animate({
-          //   scrollTop: $(elementClicked).offset().top
-          // }, 500);
+      var state = History.getState();
+      var viewer = $(state.data.postID + ' .viewer');
+      $.post(state.url, function(data) {
+        viewer.load(state.url + ' .single-content', function(){
+            $(this).slideDown('normal', function() {
+              $('.projectSlideshow').cycle({
+                fx: 'scrollHorz',
+                easeIn: 'swing',
+                timeout: 0, 
+                next:   '#next2', 
+                prev:   '#prev2'
+              });
+            });
+          });
         });
-        return false;
-      });
-    }
+      }
 
     // Click for post
-    elementClicked.on('click', function(e) {
-      var path = $(this).attr('href');
-      var title = $(this).attr('title');
-      History.pushState('ajax',title,path);
-      return false;
-    });
+    elementClicked.each(function(index){
+    
+      $(this).on('click', function(e) {
 
-    if ($('body').hasClass('home')) {
-      History.Adapter.bind(window,'statechange',function() {
-        load_ajax_data();
+        e.preventDefault();
+
+        // Set Variables
+        var That = $(this);
+        var path = That.attr('href');
+        var title = That.attr('title');
+        var imgWidth = $('.imagefit').width();
+        var imgContainer = $('.thumbnailContainer');
+
+        // Find clicked thumb width and apply it to container
+        That.find(imgContainer).css({
+          minWidth : imgWidth
+        });
+
+          // Then fade out that thumb
+          That.fadeOut(function (){
+
+            $(this).css({
+              display: 'block',
+              visibility: 'hidden'
+            });
+
+            // Go up dom to find parent div and make width 100%
+            That.parents('div:eq(0)')
+              .css({ margin: '0', height: 'auto' })
+              .animate({width:'652px'}, 500);
+          });
+
+        // Append viewer after project user has clicked on
+        var viewer = $('<div class="viewer" />');
+        $(this, '.category-projects .project a').after(viewer);
+
+        // History ting
+        var postID = That.closest('.post').attr('id');
+        History.pushState({ postID: postID }, title, path);
+
+        // Scroll to new viewer
+        $('html, body').animate({
+          scrollTop: $(That, '.viewer').offset().top
+        }, 500);
+
       });
-    } else {
-      History.Adapter.bind(window,'popstate',function() {
-        load_ajax_data();
-      });
-    }
+
+      // If on homepage, load_ajax_data as statechange
+      if ($('body').hasClass('home')) {
+        History.Adapter.bind(window,'statechange',function() {
+          load_ajax_data();
+        });
+      } else {}
+
+    });
 
   }
 

@@ -1,5 +1,7 @@
 /* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
 
+/* @override http://www.architectureplb.com/development/wp-content/themes/theme-plb/style.css */
+
 /* @group RESET */
 
 /**
@@ -337,6 +339,10 @@ img.imagefit{
 
 div.homepage_post{
 	overflow: hidden;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 
@@ -807,10 +813,31 @@ li.project a{
 }
 
 .viewer {
+<<<<<<< HEAD
+	position: absolute;
+	top: 0;
+	left: 0;
 	background: blue;
 	width: 500px;
 	height: 500px;
+=======
+	position: relative;
+	width: 652px;
+	z-index: 100;
 }
+.viewer .single-content {
+	z-index: 101;
+	margin: 0;
+>>>>>>> 5597dcadabb19eb144dce62f5332eb666eb32a8c
+}
+.home .viewer {
+	display: none;
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5597dcadabb19eb144dce62f5332eb666eb32a8c
 
 div.thumbnailContainer {
 	width: 100%;
@@ -1151,13 +1178,17 @@ div.navigation{
 	color: #515151;
 	z-index: 999;
 	background-color: rgba(254,255,255,0.79);
+
 }
 
 #infscr-loading img{
 	margin-left: 49%;
 	margin-right: 49%;
 	margin-bottom: 10px;
+
 }
+
+
 
 /* @end */
 
@@ -1205,3 +1236,27 @@ div.nav {
 }
 
 /* @end*/
+
+
+/* @group SEARCH RESULTS */
+div.searchContainer {
+width: 200px;
+}
+
+div.search_item {
+	float: left;
+width: 100%;
+}
+
+li.search {
+	float: left;
+	list-style-type: none;
+width: 100%;
+display: block;
+}
+
+
+
+/* @end */
+
+

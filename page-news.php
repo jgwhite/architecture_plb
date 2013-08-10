@@ -49,16 +49,17 @@
 
 </div><!-- .content -->
 <?php get_sidebar(); ?>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/jquery.infinitescroll.min.js"></script>
 <script type="text/javascript">
   $('div.content').infinitescroll({
+		loading:{
+			finishedMsg: "<em>Finished</em>",
+				msgText: "<em>Loading...</em>",
+				img: "http://architectureplb.com/development/wp-content/themes/theme-plb/images/ajax-loader.gif"
+		},
     navSelector  : "div.navigation",            
     nextSelector : "div.navigation a:first",                  
-    itemSelector : "div.content div.news_item",
-		loadingText  : "Loading...",
-		loadingImg   : "/wp-content/themes/theme-plb/images/ajax-loader.gif",          
-		donetext     : "Finished"
+    itemSelector : "div.content div.news_item"
   });
 </script>
 <?php get_footer(); ?>
