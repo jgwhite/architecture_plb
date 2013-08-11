@@ -5,7 +5,8 @@
 */
 ?>
 <?php get_header(); ?>
-<script type="text/javascript" charset="utf-8">
+<script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/smooth-scroll.js"></script>
+<script type="text/javascript">
 $(function(){
   $.scrollIt();
 });	
