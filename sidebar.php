@@ -111,19 +111,31 @@
 		
 		<?php if (is_page(array('team','about','recruitment'))) { ?>
 			<ul class="project_filter isPageTeamAboutRecruitment">
+				<li><a href="#" data-scroll-nav="0">Directors</a></li>
+				<li><a href="#" data-scroll-nav="1">Associates</a></li>
+				<li><a href="#" data-scroll-nav="2">Team</a></li>
 			<?php wp_nav_menu( array( 'theme_location' => 'about-menu' ) ); ?>
+				
 			</ul>
 		<?php } ?>
 		
 		<?php if (is_single() && in_category( 'directors')) { ?>
 			<ul class="project_filter isSingleDirectors">
+				<li><a href="/development/about" data-scroll-nav="0">Directors</a></li>
+				<li><a href="/development/about" data-scroll-nav="1">Associates</a></li>
+				<li><a href="/development/about" data-scroll-nav="2">Team</a></li>
 			<?php wp_nav_menu( array( 'theme_location' => 'about-menu' ) ); ?>
+			
 			</ul>
 		<?php } ?>
 
 		<?php if (is_single() && in_category( 'associates')) { ?>
 			<ul class="project_filter isSingleAssociates">
+				<li><a href="/development/about" data-scroll-nav="0">Directors</a></li>
+				<li><a href="/development/about" data-scroll-nav="1">Associates</a></li>
+				<li><a href="/development/about" data-scroll-nav="2">Team</a></li>
 			<?php wp_nav_menu( array( 'theme_location' => 'about-menu' ) ); ?>
+			
 			</ul>
 		<?php } ?>
 		

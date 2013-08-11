@@ -717,6 +717,7 @@ ul.main_nav li a:hover,
 }
 
 ul.main_nav li.current_page_item a,
+.active,
 li.current-menu-item a,
 ul#menu-about-us.menu li.current_page_item a,
 ul.project_filter li.current-post-parent a{

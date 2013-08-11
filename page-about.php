@@ -5,9 +5,14 @@
 */
 ?>
 <?php get_header(); ?>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+  $.scrollIt();
+});	
+</script>
 	<div class="content borderTop_1">
 		<a name="directors">
-			<div class="team" >
+			<div class="team" data-scroll-index="0">
 				<div class="grid_4">
 					<h2>Directors</h2>
 				</div><!-- .grid_4 -->
@@ -39,7 +44,7 @@
 		</a>
 
 		<a name="associates">
-			<div class="team borderTop_1 paddingTop_07">
+			<div class="team borderTop_1 paddingTop_07" data-scroll-index="1">
 				<div class="grid_4">
 					<h2>Associates</h2>
 					</div><!-- .grid_4 -->
@@ -69,7 +74,7 @@
 		</a>
 		
 		<a name="team">
-			<div class="team borderTop_1 paddingTop_07">
+			<div class="team borderTop_1 paddingTop_07" data-scroll-index="2">
 				<div class="grid_4">
 					<h2>Team</h2>
 				</div><!-- .grid_4 -->
