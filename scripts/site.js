@@ -86,7 +86,9 @@ APLB.projectFunction = function() {
 
         e.preventDefault();
 
-        $(this, '.viewer').slideUp();
+        if( $('.viewer').is(':visible') ) {
+          $('.viewer').slideUp().empty();
+        } else {};
 
         $('body').css({cursor: 'progress'});
 
@@ -106,13 +108,13 @@ APLB.projectFunction = function() {
           That.fadeOut(function (){
 
             $(this).css({
-              display: 'block',
+              display: 'none',
               visibility: 'hidden'
             });
 
             // Go up dom to find parent div and make width 100%
             That.parents('div:eq(0)')
-              .css({ margin: '0', height: 'auto' })
+              .css({ height: 'auto' })
               .animate({width:'652px'}, 500);
           });
 
